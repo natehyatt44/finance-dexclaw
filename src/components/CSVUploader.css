@@ -1,0 +1,123 @@
+.uploader-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.upload-zone {
+  background-color: var(--bg-secondary);
+  border: 2px dashed var(--bg-tertiary);
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.upload-zone:hover {
+  border-color: var(--accent);
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.upload-zone.drag-over {
+  border-color: var(--accent);
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.upload-zone h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.upload-zone p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.upload-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.upload-btn:hover:not(:disabled) {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger);
+  color: #fca5a5;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.csv-format {
+  background-color: var(--bg-secondary);
+  border-left: 4px solid var(--accent);
+  padding: 24px;
+  border-radius: 6px;
+}
+
+.csv-format h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.csv-format p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.csv-format code {
+  background-color: var(--bg-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: #a7f3d0;
+  font-size: 12px;
+}
+
+.example {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--bg-tertiary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .upload-zone {
+    padding: 40px 24px;
+  }
+
+  .upload-zone h2 {
+    font-size: 20px;
+  }
+
+  .upload-icon {
+    font-size: 36px;
+  }
+}
